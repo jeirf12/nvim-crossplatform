@@ -23,7 +23,7 @@ nmap <Leader>q :q<CR>
 nmap <Leader>tn :tabnew
 
 "Command jump next tab
-nmap <Leader><TAB> :tabnext<CR>
+nmap <Leader><Tab> :tabnext<CR>
 
 "Command jump previous tab
 nmap <Leader><left> :tabprev<CR>
@@ -44,7 +44,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 if &filetype == "javascript" || &filetype == "python"
-  inoremap <c-space> <C-x><C-u>
+  inoremap <c-Space> <C-x><C-u>
 else
-  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <c-Space> coc#refresh()
 endif
+
