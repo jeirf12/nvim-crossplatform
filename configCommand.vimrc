@@ -5,7 +5,7 @@ let mapleader = " "
 nmap <silent> <buffer> gk <Plug> (kite -docs)
 
 "Command from open terminal down
-nmap <c-t> :split<CR>:term<CR>:resize 14<CR>i
+nmap <c-t> :split<CR>:term<CR>-<CR>i
 
 "Command easymotion
 nmap <Leader>s <Plug>(easymotion-s2)

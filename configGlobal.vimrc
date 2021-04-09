@@ -17,3 +17,6 @@ set tabstop=4
 retab
 set ic
 set splitbelow
+
+"Don´t pass messages to |ins-completion-menu|
+set shortmess+=c

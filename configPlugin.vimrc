@@ -1,6 +1,7 @@
 call plug#begin('~\plugged')
 "Themes
 Plug 'morhetz/gruvbox'
+"Plug 'Badacadabra/vim-archery'
 
 "IDE
 Plug 'easymotion/vim-easymotion'
@@ -28,5 +29,8 @@ Plug 'tpope/vim-commentary'
 
 "vim surround
 Plug 'tpope/vim-surround'
+
+"vim auto-pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()

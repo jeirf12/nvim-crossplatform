@@ -12,9 +12,16 @@ autocmd FileType apache setlocal commentstring=#\ %s
 "Rulers ident line
 let g:identLine_char_list = ['│', '┊']
 
+"THEMES VIM SETTINGS
+"************************************
 "Rulers gruvbox
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
+
+"Rulers archery
+"colorscheme archery
+
+"***************************************
 
 "Rulers Nerdtree
 let NERDTreeQuitOnOpen = 1
@@ -27,11 +34,15 @@ let g:tagbar_autofocus = 1
 let g:kite_supported_languajes = ['javascript', 'python']
 
 "Rulers COC
+"if you want to install more coc supports place them inside the array or else
+"with coc-install
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 autocmd FileType python left b:coc_suggest_disable = 1
 autocmd FileType javascript left b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
+
 "Don´t pass messages to |ins-completion-menu|
-set shortmess+=c
+" set shortmess+=c
 
 "enable format json a nvim
 autocmd FileType json syntax match Comment +\/\/.\+$+
