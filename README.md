@@ -13,20 +13,9 @@ _You need to have the following software installed before applying this configur
 
 ## Installation 🔧
 
-_First check if this folder exists **~\AppData\local\nvim** :_
-
+_Open a terminal inside the repository folder then run the following file script:_
 ```
-$ mkdir ~\AppData\Local\nvim
-```
-_Then enter the repository folder, open a console inside and run the following:_
-```
-$ move config* ~\AppData\Local\nvim
-```
-```
-$ move init.vim ~\AppData\Local\nvim
-```
-```
-$ move .vimrc %USERPROFILE% 
+$ install.bat
 ```
 
 ## Post-Requisites 🛠️
