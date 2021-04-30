@@ -28,11 +28,11 @@ _You need the following software installed after installation:_
 ## Execution ⚙️
 
 _When you run for the first time you have to write the following inside neovim:_
-```
+```vim
 $ :PlugInstall 
 ```
 _or press the following keys_
-```
-$ <space><p><i> 
+```vim
+$ <space>+<p>+<i> 
 ```
 _The latter installs all the plugins configured in the files_
