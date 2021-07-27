@@ -33,4 +33,15 @@ Plug 'tpope/vim-surround'
 "vim auto-pairs
 Plug 'jiangmiao/auto-pairs'
 
+"Polyglot
+Plug 'sheerun/vim-polyglot'
+
+"Emmet completion html
+Plug 'mattn/emmet-vim'
+
+Plug 'whiteinge/diffconflicts'
+
+"Editor config
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()

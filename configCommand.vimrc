@@ -1,11 +1,16 @@
 "Key leader
 let mapleader = " "
 
+let g:user_emmet_leader_key = '<C-z>'
+
+"Format Document Prettier
+nmap <Leader>f :CocCommand prettier.formatFile<CR>
+
 "Command doc-kite
-nmap <silent> <buffer> gk <Plug> (kite -docs)
+nmap <silent><buffer> gk <Plug>(kite -docs)
 
 "Command from open terminal down
-nmap <c-t> :split<CR>:term<CR>-<CR>i
+nmap <c-t> :split<CR>:term<CR>-<CR>i<CR>
 
 "Command easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
@@ -33,6 +38,9 @@ nmap <Leader>c :tabclose<CR>
 
 "Command install Plug
 nmap <Leader>pi :PlugInstall<CR>
+
+"Command update Plug
+nmap <Leader>pu :PlugUpdate<CR>
 
 "Command open TagBar
 nmap <Leader>tbo :TagbarOpen<CR>

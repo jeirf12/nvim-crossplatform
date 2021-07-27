@@ -1,5 +1,26 @@
 "Rulers Plugins installed
 
+"activa o desactiva el autocorrector al entrar y salir de un .txt respectivamente
+autocmd BufEnter *.txt set spell spelllang=en,es
+autocmd BufLeave *.txt set nospell
+
+"Save folds on exit and load them on edit
+autocmd BufWinLeave ?* mkview
+autocmd BufWinEnter ?* silent! loadview 
+
+"Recordar ultima linea del archivo
+if has("autocmd")
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") |  exe "normal g`\"" |  endif
+endif
+
+au FileType gitcommit let b:EditorConfig_disable = 1
+
+"Format sql
+autocmd BufFilePre *.sql :CocCommand sql.Format
+
+"Rulers doxygen
+let g:load_doxygen_syntax=1
+
 "Rulers python3
 let g:python3_host_prog = 'C:\Python39\python.exe'
 
@@ -31,7 +52,8 @@ let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
 "Rulers kite
-let g:kite_supported_languajes = ['javascript', 'python']
+let g:kite_supported_languages = ['javascript', 'python']
+let g:kite_tab_complete = 1
 
 "Rulers COC
 "if you want to install more coc supports place them inside the array or else
@@ -39,7 +61,7 @@ let g:kite_supported_languajes = ['javascript', 'python']
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 autocmd FileType python left b:coc_suggest_disable = 1
 autocmd FileType javascript left b:coc_suggest_disable = 1
-autocmd FileType scss setl iskeyword+=@-@
+autocmd FileType scss setl iskeyword+=@-@@-@
 
 "Don´t pass messages to |ins-completion-menu|
 " set shortmess+=c
