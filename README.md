@@ -24,3 +24,9 @@ When you run for the first time you have to write the following
 inside neovim `:PlugInstall ` or press the following 
 keys `<space>+<p>+<i>` The latter installs all the plugins 
 configured in the files and that's it, you can now use neovim.
+
+## Uninstall :cyclone:
+To uninstall the configurations just run this script:
+```
+$ uninstall.bat
+```

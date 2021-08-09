@@ -1,6 +1,6 @@
 @echo off
 
-:: Toda este codigo se necesita para los colores
+:: Todo este fragmento de código se necesita para los colores
 for /F %%a in ('echo prompt $E ^| cmd') do (
     set "ESC=%%a"
 )
