@@ -11,7 +11,7 @@ You need to have the following software installed before applying this configura
 ## Installation 🔧
 Open a terminal inside the repository folder then run the following file script:
 ```
-$ install.bat
+install.bat
 ```
 
 ## Post-Requisites 🛠️
@@ -28,5 +28,5 @@ configured in the files and that's it, you can now use neovim.
 ## Uninstall :cyclone:
 To uninstall the configurations just run this script:
 ```
-$ uninstall.bat
+uninstall.bat
 ```
