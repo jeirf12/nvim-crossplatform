@@ -10,3 +10,5 @@ source ~\AppData\Local\nvim\configRulerPlugin.vimrc
 "Settings Command
 source ~\AppData\Local\nvim\configCommand.vimrc
 
+"Settings Customs Functions
+source ~\AppData\Local\nvim\configFunctions.vimrc

@@ -58,7 +58,7 @@ let g:kite_tab_complete = 1
 "Rulers COC
 "if you want to install more coc supports place them inside the array or else
 "with coc-install
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet']
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 autocmd FileType python left b:coc_suggest_disable = 1
 autocmd FileType javascript left b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@@-@
