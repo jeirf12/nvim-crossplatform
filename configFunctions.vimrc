@@ -25,7 +25,7 @@ function OpenTerminal()
     execute "q"
   else 
     " Open terminal
-    execute "vsp term://cmd"
+    execute "split term://cmd"
     
     " turn off numbers
     execute "set nonu"

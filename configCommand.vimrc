@@ -18,8 +18,8 @@ nmap <Leader>f :CocCommand prettier.formatFile<CR>
 nmap <silent><buffer> gk <Plug>(kite -docs)
 
 "Command from open terminal down
-nmap <C-t> :split<CR>:term<CR>-<CR>i<CR>
-" nmap <C-t> :call OpenTerminal()<CR>
+" nmap <C-t> :split<CR>:term<CR>-<CR>i<CR>
+nmap <C-t> :call OpenTerminal()<CR>
 
 "Command easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
