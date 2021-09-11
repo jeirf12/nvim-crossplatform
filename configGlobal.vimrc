@@ -3,6 +3,7 @@ set number
 set mouse=a
 set numberwidth=1
 syntax enable
+filetype plugin on
 set showcmd
 set ruler
 set cursorline
@@ -17,3 +18,13 @@ set tabstop=4
 retab
 set ic
 set splitbelow
+set nocompatible
+set incsearch
+
+"Don´t pass messages to |ins-completion-menu|
+set shortmess+=c
+set foldtext=getline(v:foldstart)
+set foldmethod=manual
+set viewoptions=folds
+
+set updatetime=100
