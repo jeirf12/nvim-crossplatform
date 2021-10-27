@@ -54,4 +54,7 @@ Plug 'vim-test/vim-test'
 " diff file
 Plug 'mhinz/vim-signify'
 
+" close tag html
+Plug 'alvan/vim-closetag'
+
 call plug#end()

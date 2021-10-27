@@ -22,7 +22,7 @@ autocmd BufFilePre *.sql :CocCommand sql.Format
 let g:load_doxygen_syntax=1
 
 "Rulers python3
-let g:python3_host_prog = 'C:\Python39\python.exe'
+let g:python3_host_prog = 'C:\Windows\py.exe'
 
 "OMNIFUNC COMPLETE VIM
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
@@ -54,6 +54,7 @@ let g:tagbar_autofocus = 1
 "Rulers kite
 let g:kite_supported_languages = ['javascript', 'python']
 let g:kite_tab_complete = 1
+" let g:kite_documentation_continual=1
 
 "Rulers COC
 "if you want to install more coc supports place them inside the array or else

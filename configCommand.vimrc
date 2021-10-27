@@ -7,10 +7,6 @@ nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
 
-"split windows open
-nmap <Leader>> 10<C-W>>
-nmap <Leader>< 10<C-W><
-
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>
 
