@@ -22,7 +22,7 @@ autocmd BufFilePre *.sql :CocCommand sql.Format
 let g:load_doxygen_syntax=1
 
 "Rulers python3
-let g:python3_host_prog = 'C:\Windows\py.exe'
+let g:python3_host_prog = 'C:\Users\jhonf\AppData\Local\Programs\Python\Python310\python.exe'
 
 "OMNIFUNC COMPLETE VIM
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
