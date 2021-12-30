@@ -28,3 +28,4 @@ set foldmethod=manual
 set viewoptions=folds
 
 set updatetime=100
+set termguicolors

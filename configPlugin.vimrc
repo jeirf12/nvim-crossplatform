@@ -1,7 +1,7 @@
 call plug#begin('~\plugged')
 "Themes
 Plug 'morhetz/gruvbox'
-"Plug 'Badacadabra/vim-archery'
+Plug 'Badacadabra/vim-archery'
 
 "IDE
 Plug 'easymotion/vim-easymotion'
@@ -56,5 +56,8 @@ Plug 'mhinz/vim-signify'
 
 " close tag html
 Plug 'alvan/vim-closetag'
+
+" php completion
+" Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
 call plug#end()

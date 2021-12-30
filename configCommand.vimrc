@@ -1,11 +1,17 @@
 "Key leader
 let mapleader = " "
 
-let g:user_emmet_leader_key = '<C-z>'
+let g:user_emmet_leader_key = '<c-z>'
 
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
+
+"resize windows
+nmap <Leader>l  <c-w>>
+nmap <Leader>h  <c-w><
+nmap <Leader>i  <c-w>=
+nmap <Leader>a  <c-w>\|
 
 "Format Document Prettier
 nmap <Leader>f :CocCommand prettier.formatFile<CR>

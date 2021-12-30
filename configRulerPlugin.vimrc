@@ -1,5 +1,11 @@
 "Rulers Plugins installed
 
+"Rulers fzf layout
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
+
+"fix double dolars php
+autocmd FileType php set iskeyword+=$
+
 "activa o desactiva el autocorrector al entrar y salir de un .txt respectivamente
 autocmd BufEnter *.txt set spell spelllang=en,es
 autocmd BufLeave *.txt set nospell
@@ -40,7 +46,7 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 
 "Rulers archery
-"colorscheme archery
+" colorscheme archery
 
 "***************************************
 
@@ -62,7 +68,7 @@ let g:kite_tab_complete = 1
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 autocmd FileType python left b:coc_suggest_disable = 1
 autocmd FileType javascript left b:coc_suggest_disable = 1
-autocmd FileType scss setl iskeyword+=@-@@-@
+" autocmd FileType scss setl iskeyword+=@-@@-@
 
 "Don´t pass messages to |ins-completion-menu|
 " set shortmess+=c
@@ -85,13 +91,13 @@ let g:lightline = {
 	\},
 	\'component': {
 	\   'bufnum': '%n',
-	\   'inactive': 'inactive'
+	\   'inactive': 'inactive',
 	\},
 	\'component_function': {
 	\   'gitbranch': 'gitbranch#name',
-	\   'kitestatus': 'kite#statusline'
+	\   'kitestatus': 'kite#statusline',
 	\},
-	\'colorscheme': 'gruvbox',
+	\'colorscheme': 'archery',
 	\'subseparator': {
 	\   'left': '',
 	\   'right': ''
