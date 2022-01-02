@@ -1,9 +1,10 @@
-function ActLang(state)
-  if a:state == "on"
+function ActiveLanguage()
+  let b:state = &spell ? "on":"off"
+  if b:state == "off"
     echo "Autocorrect on"
     set spell spelllang=en,es
-  elseif a:state == "off"
-    echo "Autocorrect on"
+  elseif b:state == "on"
+    echo "Autocorrect off"
     set nospell
   else
     echo "Unrecognized status"
@@ -11,12 +12,6 @@ function ActLang(state)
 endfunction
 
 function OpenTerminal() 
-  " Move to up most buffer
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&bufType", "not found")
 
