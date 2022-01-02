@@ -1,4 +1,9 @@
-call plug#begin('~\plugged')
+if has('win32') || has('win64')
+  let pathPlugin='~\plugged'
+elseif has('unix')
+  let pathPlugin="~/.vim/plugged"
+endif
+call plug#begin(pathPlugin)
 "Themes
 Plug 'morhetz/gruvbox'
 " Plug 'Badacadabra/vim-archery'
