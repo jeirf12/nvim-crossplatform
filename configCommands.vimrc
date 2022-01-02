@@ -10,6 +10,8 @@ nnoremap <Leader>TT :TestSuite<CR>
 "resize windows
 nmap <Leader>l  <c-w>>
 nmap <Leader>h  <c-w><
+nmap <leader>j  <c-w>+
+nmap <leader>k  <c-w>-
 nmap <Leader>i  <c-w>=
 nmap <Leader>a  <c-w>\|
 
@@ -20,7 +22,6 @@ nmap <Leader>f :CocCommand prettier.formatFile<CR>
 nmap <silent><buffer> gk <Plug>(kite -docs)
 
 "Command from open terminal down
-" nmap <C-t> :split<CR>:term<CR>-<CR>i<CR>
 nmap <C-t> :call OpenTerminal()<CR>
 nmap <c-a> :call ActiveLanguage()<CR>
 

@@ -5,6 +5,7 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true
 
 "fix double dolars php
 autocmd FileType php set iskeyword+=$
+autocmd FileType php setlocal omnifunc=lsp#complete
 
 "activa o desactiva el autocorrector al entrar y salir de un .txt respectivamente
 autocmd BufEnter *.txt set spell spelllang=en,es
@@ -28,7 +29,12 @@ autocmd BufFilePre *.sql :CocCommand sql.Format
 let g:load_doxygen_syntax=1
 
 "Rulers python3
-let g:python3_host_prog = 'C:\Users\jhonf\AppData\Local\Programs\Python\Python310\python.exe'
+if has('win32') || has('win64')
+	let g:python3_host_prog = 'C:\Users\jhonf\AppData\Local\Programs\Python\Python310\python.exe'
+elseif has('unix')
+	let g:python_host_prog = '/bin/python2'
+	let g:python3_host_prog = '/bin/python3'
+endif
 
 "OMNIFUNC COMPLETE VIM
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
@@ -60,15 +66,15 @@ let g:tagbar_autofocus = 1
 "Rulers kite
 let g:kite_supported_languages = ['javascript', 'python']
 let g:kite_tab_complete = 1
-" let g:kite_documentation_continual=1
+let g:kite_completion_max_width = 50
 
 "Rulers COC
 "if you want to install more coc supports place them inside the array or else
 "with coc-install
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 autocmd FileType python left b:coc_suggest_disable = 1
 autocmd FileType javascript left b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@@-@
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet', 'coc-clangd']
 
 "Don´t pass messages to |ins-completion-menu|
 " set shortmess+=c
@@ -82,7 +88,7 @@ let g:closetag_filenames = '*.html, *.js, *.jsx, *.ts, *.tsx'
 "Rulers lightline
 let g:lightline = {
 	\'active':{
-	\   'left': [['mode'], [], ['relativepath', 'modified']],
+	\   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
 	\   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
 	\},
 	\'inactive': {
@@ -97,7 +103,7 @@ let g:lightline = {
 	\   'gitbranch': 'gitbranch#name',
 	\   'kitestatus': 'kite#statusline',
 	\},
-	\'colorscheme': 'archery',
+	\'colorscheme': 'gruvbox',
 	\'subseparator': {
 	\   'left': '',
 	\   'right': ''

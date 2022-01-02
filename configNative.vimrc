@@ -1,9 +1,11 @@
 "rulers globals
+set nocompatible
 set number
 set mouse=a
 set numberwidth=1
-syntax enable
+set clipboard^=unnamed,unnamedplus
 filetype plugin on
+syntax enable
 set showcmd
 set ruler
 set cursorline
@@ -13,13 +15,15 @@ set sw=2
 set relativenumber
 set laststatus=2
 set noshowmode
+set path+=./**
+set splitbelow
+set background=dark
 set expandtab
+set ignorecase
+set incsearch
 set tabstop=4
 retab
 set ic
-set splitbelow
-set nocompatible
-set incsearch
 
 "Don´t pass messages to |ins-completion-menu|
 set shortmess+=c

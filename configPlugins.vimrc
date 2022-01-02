@@ -1,7 +1,7 @@
 call plug#begin('~\plugged')
 "Themes
 Plug 'morhetz/gruvbox'
-Plug 'Badacadabra/vim-archery'
+" Plug 'Badacadabra/vim-archery'
 
 "IDE
 Plug 'easymotion/vim-easymotion'

@@ -1,4 +1,4 @@
-# Neovim Settings on Windows 🚀
+# Cross-Platform Neovim Setup 🚀
 This configuration is modularized for the windows operating system
 
 ## Pre-Requisites 📋
@@ -10,8 +10,18 @@ You need to have the following software installed before applying this configura
 
 ## Installation 🔧
 Open a terminal inside the repository folder then run the following file script:
+
+For windows use:
 ```
 install.bat
+```
+For Linux use:
+```
+bash install.sh
+```
+or:
+```
+./install.sh
 ```
 
 ## Post-Requisites 🛠️
@@ -24,9 +34,22 @@ When you run for the first time you have to write the following
 inside neovim `:PlugInstall ` or press the following 
 keys `<space>+<p>+<i>` The latter installs all the plugins 
 configured in the files and that's it, you can now use neovim.
+Finally run this `:source %` to apply the changes or just exit and re-enter neovim.
+
+Note: If you want to know more about commands, open the file `confCommands.vimrc`.
 
 ## Uninstall :cyclone:
 To uninstall the configurations just run this script:
+
+For windows use:
 ```
 uninstall.bat
+```
+For Linux use:
+```
+bash uninstall.sh
+```
+or:
+```
+./uninstall.sh
 ```
