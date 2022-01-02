@@ -48,7 +48,7 @@ function installSettings(){
 	cd ~
 
 	#Coloco la ruta donde va a crear la carpeta
-	pathCreated=~/.config/nvim/config/
+	pathCreated=~/.config/nvim
 
 	#Comprueba la existencia de la carpeta
 	if [[ ! -d $pathCreated ]]; then

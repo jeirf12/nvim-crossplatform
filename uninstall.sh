@@ -25,7 +25,7 @@ function existSettings(){
 	if [ "$?" == "0" ]; then
 		flag=$((flag + 1))
 	fi
-	test -f ~/.config/.vimrc
+	test -f ~/.config/nvim/.vimrc
 	if [ "$?" == "0" ]; then
 		flag=$((flag + 1))
 	fi
