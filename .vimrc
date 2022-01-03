@@ -1,18 +1,5 @@
-"verified system operative current
-if has('win32') || has('win64')
-  if has('nvim')
-    let pathConfig=stdpath('config').'\'
-  else
-    let g:pathConfig='~\AppData\local\nvim\'
-  endif
-elseif has('unix')
-  if has('nvim')
-    let pathConfig=stdpath('config').'/'
-  else
-    let g:pathConfig='~/.config/nvim/'
-  endif
-endif
-
+"Get path config editor settings
+let pathConfig = editor.pathConfig
 
 "Settings Globals
 exe 'source '.pathConfig.'configNative.vimrc'
