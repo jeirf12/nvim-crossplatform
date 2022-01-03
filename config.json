@@ -6,7 +6,7 @@
     "python3_host_prog": "C:\\Users\\jhonf\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
     "pathPlugged": "~\\plugged",
     "nvim": {
-      "pathConfig": "config",
+      "pathConfig": "stdpath('config').'\\'",
       "terminal": "split term://cmd",
       "exit_terminal": "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
     },
@@ -23,7 +23,7 @@
     "python3_host_prog": "/bin/python3",
     "pathPlugged": "~/.vim/plugged",
     "nvim": {
-      "pathConfig": "config",
+      "pathConfig": "stdpath('config').'/'",
       "terminal": "split term://zsh",
       "exit_terminal": "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
     },

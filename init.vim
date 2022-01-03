@@ -16,7 +16,7 @@ endif
 " Validate editor system
 if has('nvim')
   let editor = system.nvim
-  let editor.pathConfig = stdpath(editor.pathConfig).'/'
+  let editor.pathConfig = eval(editor.pathConfig)
 else 
   let editor = system.vim
 endif
