@@ -92,7 +92,7 @@ function installSettings(){
 		rm ~/.vimrc
 	fi
 
-	ln -s $pathDestination/.vimrc ~/.vimrc
+	ln -s $pathDestination/init.vim ~/.vimrc
 
 	#Por ultimo instala requerimientos de python
 	echo -e "\n${yellowColour}[*]${endColour}${blueColour} Instalando${endColour}${purpleColour} pynvim${endColour}"

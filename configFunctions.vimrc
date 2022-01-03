@@ -11,31 +11,18 @@ function ActiveLanguage()
   endif
 endfunction
 
-function OpenTerminal() 
+function OpenTerminal(editor) 
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&bufType", "not found")
 
-  if has('nvim')
-    if has('win32') || has('win64')
-      execute 'split term://cmd'
-    elseif has('unix')
-      execute 'split term://zsh'
-    endif
-  else
-    execute 'term zsh'
-  endif
-
+  execute a:editor.terminal
   execute 'set nonu'
   execute 'set nornu'
   silent au BufLeave <buffer> stopinsert!
   silent au BufWinEnter,WinEnter <buffer> startinsert!
   
   execute "tnoremap <buffer> <C-h> <C-\\><C-n><C-w><C-h>"
-  if has('nvim')
-    execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
-  else
-    execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q!<CR>"
-  endif
+  execute a:editor.exit_terminal
   execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
   startinsert!
 endfunction

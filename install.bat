@@ -64,7 +64,7 @@ REM Comprueba la existencia del archivo .vimrc antes de ejecutar el comando
 if exist .vimrc (move .vimrc %pathDestination%)
 
 REM Crea un enlace simbolico para neovim
-mklink %USERPROFILE%\.vimrc %pathDestination%\.vimrc
+mklink %USERPROFILE%\.vimrc %pathDestination%\init.vim
 timeout /t 4 /nobreak > NUL 
 
 echo/

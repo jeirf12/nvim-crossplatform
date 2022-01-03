@@ -1,0 +1,36 @@
+{
+  "windows": {
+    "runtimepath": "~\\vimfiles",
+    "after": "~\\vimfiles\\after",
+    "python_host_prog": "C:\\Users\\jhonf\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "python3_host_prog": "C:\\Users\\jhonf\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "pathPlugged": "~\\plugged",
+    "nvim": {
+      "pathConfig": "config",
+      "terminal": "split term://cmd",
+      "exit_terminal": "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
+    },
+    "vim": {
+      "pathConfig": "~\\AppData\\Local\\nvim\\",
+      "terminal": "term cmd",
+      "exit_terminal": "tnoremap <buffer> <C-t> <C-\\><C-n>:q!<CR>"
+    }
+  },
+  "linux": {
+    "runtimepath": "~/.vim",
+    "after": "~/.vim/after",
+    "python_host_prog": "/bin/python2",
+    "python3_host_prog": "/bin/python3",
+    "pathPlugged": "~/.vim/plugged",
+    "nvim": {
+      "pathConfig": "config",
+      "terminal": "split term://zsh",
+      "exit_terminal": "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
+    },
+    "vim": {
+      "pathConfig": "~/.config/nvim/",
+      "terminal": "term zsh",
+      "exit_terminal": "tnoremap <buffer> <C-t> <C-\\><C-n>:q!<CR>"
+    }
+  }
+}

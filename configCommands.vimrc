@@ -22,7 +22,7 @@ nmap <Leader>f :CocCommand prettier.formatFile<CR>
 nmap <silent><buffer> gk <Plug>(kite -docs)
 
 "Command from open terminal down
-nmap <C-t> :call OpenTerminal()<CR>
+nmap <C-t> :call OpenTerminal(editor)<CR>
 nmap <c-a> :call ActiveLanguage()<CR>
 
 "Command easymotion

@@ -29,12 +29,8 @@ autocmd BufFilePre *.sql :CocCommand sql.Format
 let g:load_doxygen_syntax=1
 
 "Rulers python3
-if has('win32') || has('win64')
-	let g:python3_host_prog = 'C:\Users\jhonf\AppData\Local\Programs\Python\Python310\python.exe'
-elseif has('unix')
-	let g:python_host_prog = '/bin/python2'
-	let g:python3_host_prog = '/bin/python3'
-endif
+let g:python_host_prog = system.python_host_prog
+let g:python3_host_prog = system.python3_host_prog
 
 "OMNIFUNC COMPLETE VIM
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
