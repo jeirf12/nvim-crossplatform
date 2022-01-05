@@ -54,20 +54,15 @@ function installSettings(){
 	fi
 
 	#Comprueba la existencia de los archivos conf 
-	if [[ -e $pathconfigFunctions.vimrc ]] &&	[[ -e $pathconfigCommands.vimrc ]] && [[ -e $pathconfigNative.vimrc ]] && [[ -e $pathconfPlugins.vimrc ]] && [[ -e $pathconfigRulers.vimrc ]]; then
-		#Copia o mueve las configuraciones en la carpeta creada 
-		#en el anterior paso
-		mv "$pathconfigNative.vimrc" "$pathCreated"
-		mv "$pathconfigPlugins.vimrc" "$pathCreated"
-		mv "$pathconfigRulers.vimrc" "$pathCreated"
-		mv "$pathconfigCommands.vimrc" "$pathCreated"
-		mv "$pathconfigFunctions.vimrc" "$pathCreated"
-	fi
-
-	ls "$pathconfig.json" >> /dev/null 2>1& && mv "$pathconfig.json" "$pathCreated"
+	ls "configRulers.vimrc" >> /dev/null 2>&1 && mv "configRulers.vimrc" "$pathCreated"
+	ls "configNative.vimrc" >> /dev/null 2>&1 && mv "configNative.vimrc" "$pathCreated"
+	ls "configPlugins.vimrc" >> /dev/null 2>&1 && mv "configPlugins.vimrc" "$pathCreated"
+	ls "configCommands.vimrc" >> /dev/null 2>&1 && mv "configCommands.vimrc" "$pathCreated"
+	ls "configFunctions.vimrc" >> /dev/null 2>&1 && mv "configFunctions.vimrc" "$pathCreated"
+	ls "config.json" >> /dev/null 2>&1 && mv "config.json" "$pathCreated"
 
 	#Fijo la ruta de origen
-	pathSource=$path/init.vim
+	pathSource=init.vim
 
 	#Fijo la ruta de destino
 	pathDestination=$pathCreated
@@ -79,7 +74,7 @@ function installSettings(){
 	fi
 
 	#Fijo la ruta de origen
-	pathSource=$path/.vimrc
+	pathSource=.vimrc
 
 	#Comprueba la existencia del archivo origen
 	if [[ -e $pathSource ]]; then
@@ -87,11 +82,11 @@ function installSettings(){
 		mv "$pathSource" "$pathDestination"
 	fi
 
-	if [[ -e ~/.vimrc ]]; then
+	if [[ -h ~/.vimrc ]] || [[ -e ~/.vimrc ]]; then
 		rm ~/.vimrc
 	fi
 
-	ln -s "$pathDestinationinit.vim" ~/.vimrc
+	ln -s "${pathDestination}init.vim" ~/.vimrc
 
 	#Por ultimo instala requerimientos de python
 	echo -e "\n${yellowColour}[*]${endColour}${blueColour} Instalando${endColour}${purpleColour} pynvim${endColour}"
