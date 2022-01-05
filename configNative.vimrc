@@ -1,4 +1,5 @@
 "rulers globals
+set hidden
 set nocompatible
 set number
 set mouse=a

@@ -42,11 +42,11 @@ nmap <Leader>q :q<CR>
 "Command create new tab
 nmap <Leader>tn :tabnew
 
-"Command jump next tab
-nmap <Leader><Tab> :tabnext<CR>
+"Command jump next buffer
+nmap <Leader><Tab> :bnext<CR>
 
-"Command jump previous tab
-nmap <Leader><left> :tabprev<CR>
+"Command jump previous buffer
+nmap <Leader><left> :bp<CR>
 
 "Command close tab
 nmap <Leader>c :tabclose<CR>
