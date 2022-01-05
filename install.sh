@@ -44,11 +44,8 @@ function installSettings(){
 	#Obtiene la ruta donde se encuentra el repositorio
 	path=$(pwd)
 
-	#se devuelve a la raiz de las carpetas del usuario
-	cd ~
-
 	#Coloco la ruta donde va a crear la carpeta
-	pathCreated=~/.config/nvim
+	pathCreated=~/.config/nvim/
 
 	#Comprueba la existencia de la carpeta
 	if [[ ! -d $pathCreated ]]; then
@@ -65,14 +62,14 @@ function installSettings(){
 		mv "$path/configRulers.vimrc" "$pathCreated"
 		mv "$path/configCommands.vimrc" "$pathCreated"
 		mv "$path/configFunctions.vimrc" "$pathCreated"
-		mv "$path/config.json"
+		mv "$path/config.json" "$pathCreated"
 	fi
 
 	#Fijo la ruta de origen
 	pathSource=$path/init.vim
 
 	#Fijo la ruta de destino
-	pathDestination=~/.config/nvim/
+	pathDestination=$pathCreated
 
 	#Comprueba la existencia del archivo origen
 	if [[ -e $pathSource ]]; then
@@ -93,7 +90,7 @@ function installSettings(){
 		rm ~/.vimrc
 	fi
 
-	ln -s $pathDestination/init.vim ~/.vimrc
+	ln -s $pathDestinationinit.vim ~/.vimrc
 
 	#Por ultimo instala requerimientos de python
 	echo -e "\n${yellowColour}[*]${endColour}${blueColour} Instalando${endColour}${purpleColour} pynvim${endColour}"
