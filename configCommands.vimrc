@@ -3,6 +3,9 @@ let mapleader = " "
 
 let g:user_emmet_leader_key = '<c-z>'
 
+"reload settings vimrc
+nmap <Leader><CR> :source $MYVIMRC<CR>
+
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
@@ -48,8 +51,8 @@ nmap <Leader><Tab> :bnext<CR>
 "Command jump previous buffer
 nmap <Leader><left> :bp<CR>
 
-"Command close tab
-nmap <Leader>c :tabclose<CR>
+"Command close buffer
+nmap <Leader>c :bd<CR>
 
 "Command install Plug
 nmap <Leader>pi :PlugInstall<CR>

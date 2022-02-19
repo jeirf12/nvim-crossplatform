@@ -34,3 +34,6 @@ set viewoptions=folds
 
 set updatetime=100
 set termguicolors
+set nobackup
+set nowritebackup
+set noswapfile
