@@ -26,3 +26,11 @@ function OpenTerminal(editor)
   execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
   startinsert!
 endfunction
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction

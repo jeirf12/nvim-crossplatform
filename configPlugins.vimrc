@@ -60,4 +60,7 @@ Plug 'alvan/vim-closetag'
 " php completion
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
+" Icons 
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()

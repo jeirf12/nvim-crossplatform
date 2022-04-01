@@ -60,9 +60,9 @@ let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
 "Rulers kite
-let g:kite_supported_languages = ['javascript', 'python']
-let g:kite_tab_complete = 1
-let g:kite_completion_max_width = 50
+" let g:kite_supported_languages = ['javascript', 'python']
+" let g:kite_tab_complete = 1
+" let g:kite_completion_max_width = 50
 
 "Rulers COC
 "if you want to install more coc supports place them inside the array or else
@@ -83,25 +83,27 @@ let g:closetag_filenames = '*.html, *.js, *.jsx, *.ts, *.tsx'
 
 "Rulers lightline
 let g:lightline = {
-	\'active':{
-	\   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-	\   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
-	\},
-	\'inactive': {
-	\   'left': [['inactive'], ['relativepath']],
-	\   'right': [['bufnum']]
-	\},
-	\'component': {
-	\   'bufnum': '%n',
-	\   'inactive': 'inactive',
-	\},
-	\'component_function': {
-	\   'gitbranch': 'gitbranch#name',
-	\   'kitestatus': 'kite#statusline',
-	\},
-	\'colorscheme': 'gruvbox',
-	\'subseparator': {
-	\   'left': '',
-	\   'right': ''
-	\},
-	\}
+    \'active':{
+    \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
+    \   'right': [['kitestatus', 'fileformat'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+    \},
+    \'inactive': {
+    \   'left': [['inactive'], ['relativepath']],
+    \   'right': [['bufnum']]
+    \},
+    \'component': {
+    \   'bufnum': '%n',
+    \   'inactive': 'inactive',
+    \},
+    \'component_function': {
+    \   'gitbranch': 'gitbranch#name',
+    \   'kitestatus': 'kite#statusline',
+    \   'filetype': "MyFiletype",
+    \   'fileformat': "MyFileformat",
+    \},
+    \'colorscheme': 'gruvbox',
+    \'subseparator': {
+    \   'left': '',
+    \   'right': ''
+    \},
+    \}
