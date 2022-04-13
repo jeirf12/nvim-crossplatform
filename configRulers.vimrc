@@ -102,8 +102,6 @@ let g:lightline = {
     \   'fileformat': "MyFileformat",
     \},
     \'colorscheme': 'gruvbox',
-    \'subseparator': {
-    \   'left': '',
-    \   'right': ''
-    \},
+    \'separator': { 'left': '', 'right': '' },
+    \'subseparator': { 'left': '', 'right': '' },
     \}

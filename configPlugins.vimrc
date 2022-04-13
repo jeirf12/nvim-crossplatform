@@ -12,7 +12,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "lightline - status bar
-Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 "tagbar
