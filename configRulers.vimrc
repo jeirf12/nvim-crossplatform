@@ -60,9 +60,9 @@ let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
 "Rulers kite
-" let g:kite_supported_languages = ['javascript', 'python']
-" let g:kite_tab_complete = 1
-" let g:kite_completion_max_width = 50
+let g:kite_supported_languages = ['javascript', 'python']
+let g:kite_tab_complete = 1
+let g:kite_completion_max_width = 50
 
 "Rulers COC
 "if you want to install more coc supports place them inside the array or else

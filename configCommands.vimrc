@@ -69,10 +69,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" if &filetype == "javascript" || &filetype == "python"
-"   inoremap <c-Space> <C-x><C-u>
-" else
-"   inoremap <silent><expr> <c-Space> coc#refresh()
-" endif
+if &filetype == "javascript" || &filetype == "python"
+  inoremap <c-Space> <C-x><C-u>
+else
+  inoremap <silent><expr> <c-Space> coc#refresh()
+endif
 
-inoremap <silent><expr> <c-Space> coc#refresh()
+" inoremap <silent><expr> <c-Space> coc#refresh()
