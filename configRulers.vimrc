@@ -1,5 +1,10 @@
 "Rulers Plugins installed
 
+" Rulers dart and flutter
+let dart_html_in_string = v:true
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
+
 "Rulers fzf layout
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
 
@@ -60,7 +65,8 @@ let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
 "Rulers kite
-let g:kite_supported_languages = ['javascript', 'python']
+" let g:kite_supported_languages = ['javascript', 'python']
+let g:kite_supported_languages = ['python']
 let g:kite_tab_complete = 1
 let g:kite_completion_max_width = 50
 

@@ -62,4 +62,12 @@ Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --n
 " Icons 
 Plug 'ryanoasis/vim-devicons'
 
+" Dart plugin
+Plug 'dart-lang/dart-vim-plugin'
+
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+" Multiple cursors
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()

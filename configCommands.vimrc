@@ -69,10 +69,14 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-if &filetype == "javascript" || &filetype == "python"
+" if &filetype == "javascript" || &filetype == "python"
+if &filetype == "python"
   inoremap <c-Space> <C-x><C-u>
 else
   inoremap <silent><expr> <c-Space> coc#refresh()
+  " Make <CR> to accept selected completion item or notify coc.nvim to format
+  " <C-g>u breaks current undo, please make your own choice.
+  inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 endif
 
 " inoremap <silent><expr> <c-Space> coc#refresh()
