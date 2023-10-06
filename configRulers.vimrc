@@ -1,6 +1,6 @@
 "Rulers Plugins installed
 
-" Rulers dart and flutter
+"Rulers dart and flutter
 let dart_html_in_string = v:true
 let g:dart_style_guide = 2
 let g:dart_format_on_save = 1
@@ -49,8 +49,10 @@ let g:identLine_char_list = ['│', '┊']
 "THEMES VIM SETTINGS
 "************************************
 "Rulers gruvbox
+let g:gruvbox_transparent_bg = 1
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
+autocmd VimEnter * hi Normal ctermbg=none
 
 "Rulers archery
 " colorscheme archery
