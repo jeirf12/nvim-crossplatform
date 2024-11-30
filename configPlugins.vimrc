@@ -66,8 +66,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'dart-lang/dart-vim-plugin'
 
 " Markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 " Multiple cursors
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" screenshot
+Plug 'jmckiern/vim-shoot', { 'do': '\"./install.py\" chromedriver' }
+
 call plug#end()

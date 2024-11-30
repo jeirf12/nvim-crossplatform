@@ -34,3 +34,15 @@ endfunction
 function! MyFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
+
+function DeleteAllBuffersExceptCurrent()
+  " Captura buffer actual
+  let bufNumActual = bufnr("%")
+  " Carga los buffers abiertos
+  let buffers = getbufinfo({'bufloaded': 1})
+  for buf in buffers
+    if buf.bufnr != bufNumActual
+      execute 'bd' buf['bufnr']
+    endif
+  endfor
+endfunction

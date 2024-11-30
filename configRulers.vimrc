@@ -52,7 +52,7 @@ let g:identLine_char_list = ['│', '┊']
 let g:gruvbox_transparent_bg = 1
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
-autocmd VimEnter * hi Normal ctermbg=none
+autocmd VimEnter * hi Normal ctermbg=none guibg=none
 
 "Rulers archery
 " colorscheme archery
@@ -78,7 +78,7 @@ let g:kite_completion_max_width = 50
 autocmd FileType python left b:coc_suggest_disable = 1
 autocmd FileType javascript left b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@@-@
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet', 'coc-clangd']
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet']
 
 "Don´t pass messages to |ins-completion-menu|
 " set shortmess+=c

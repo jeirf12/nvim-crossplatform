@@ -51,8 +51,8 @@ nmap <Leader><Tab> :bnext<CR>
 "Command jump previous buffer
 nmap <Leader><left> :bp<CR>
 
-"Command close buffer
-nmap <Leader>c :bd<CR>
+"Command close buffers except the current one
+nmap <leader>c :call DeleteAllBuffersExceptCurrent()<CR>
 
 "Command install Plug
 nmap <Leader>pi :PlugInstall<CR>

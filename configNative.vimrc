@@ -1,4 +1,5 @@
 "rulers globals
+set encoding=utf-8
 set hidden
 set nocompatible
 set number
@@ -33,7 +34,7 @@ set foldmethod=manual
 set viewoptions=folds
 
 set updatetime=100
-" set termguicolors
+set termguicolors
 set nobackup
 set nowritebackup
 set noswapfile
